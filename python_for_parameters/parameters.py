@@ -97,12 +97,12 @@ class Parameters( ):
 
 
 # ---------------
-#def create_if_needed( ):
-global PARAMETERS
-if not PARAMETERS:
+def create_if_needed( ):
+    global PARAMETERS
+    if not PARAMETERS:
 
-     print( "creating global parameters.PARAMETERS")
-     PARAMETERS    = Parameters()
+         print( "creating global parameters.PARAMETERS")
+         PARAMETERS    = Parameters()
 
 # --------------------
-#create_if_needed()
+create_if_needed()

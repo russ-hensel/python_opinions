@@ -10,5 +10,5 @@ test_parm_approach2
 import parameters
 
 
-
+print( "in test_parm_approach2,py")
 print( parameters.PARAMETERS )
