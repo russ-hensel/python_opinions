@@ -1,21 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Nov 26 08:36:58 2024
 
-@author: russ
-"""
-
-
-
-
-# # --------------------
-# if __name__ == "__main__":
-#     #----- run the full app
-#     import main
-
-#     #main.main()
-# # --------------------
 
 global PARAMETERS
 PARAMETERS   = None
@@ -29,21 +14,14 @@ class Parameters( ):
     def choose_mode( self ):
         """
         typically choose one mode
-            and if you wish add the plus_test_mode
             if you comment all out all modes you get the default mode which should
             run, perhaps not in the way you want
+            all modes are run on top of the drfaults so they need only include
+            changes from the drfault
         """
+        pass    # when all else ic commented out
         self.mode_new_user()
-        #self.new_user_mode()
-        #self.millhouse_1_mode()
-
-        # two of my computers
-        #self.mode_millhouse_mint()
-        #self.mode_theprof_mint()
-        #self.russ_1_mode()
-
-        # --- add on for testing, use as desired edit mode for your needs
-        #self.plus_test_mode()
+        #
 
 
     # ---- ---->> Methods:  one for each mode
@@ -66,12 +44,12 @@ class Parameters( ):
         call first, then override as necessary
         good chance these settings will at least let the app run
         """
-        self.mode              = "default"
+        self.mode              = "mode_default" # I always name a moed like this.
         self.parameter_1       = "i am the second parameter"
 
         # screen width for a qt application
         self.qt_width          = 1200
-
+        # then go on with as much as you want
 
     # -----------------------------------
     def __str__( self,   ):
@@ -89,12 +67,11 @@ class Parameters( ):
     # -------
     def __init__( self, ):
         """
-        Init for instance, usually not modified, except perhaps to debug
-        may be down in listing because it should not be messed with.
+        Init for the instance, usually not modified, except perhaps to debug
+        I keey way be down in listing because it should not be messed with.
         """
         self.mode_default()
         self.choose_mode()
-
 
 # ---------------
 def create_if_needed( ):
