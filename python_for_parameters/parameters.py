@@ -21,8 +21,6 @@ class Parameters( ):
         """
         pass    # when all else ic commented out
         self.mode_new_user()
-        #
-
 
     # ---- ---->> Methods:  one for each mode
     # -------
@@ -32,30 +30,27 @@ class Parameters( ):
         a new user may experiment here.
         """
         self.mode               = "mode_new_user"
-        # but do they use the same units ?
-        self.qt_width           = 1200
-
+        self.qt_width           = 800    # use a smaller screen for new users
 
     # ------->> default mode, always call
     def mode_default( self ):
         """
-        sets up prett        #rint( self ) # for debugging y much all settings
-        documents the meaning of the modes
+        documents the meaning of the parameters
         call first, then override as necessary
-        good chance these settings will at least let the app run
+        settings should at least let the app run
         """
         self.mode              = "mode_default" # I always name a moed like this.
         self.parameter_1       = "i am the second parameter"
 
         # screen width for a qt application
         self.qt_width          = 1200
-        # then go on with as much as you want
+
+        # then go on with parameters as much as you want ......
 
     # -----------------------------------
     def __str__( self,   ):
         """
-        sometimes it is hard to see where values have come out this may help if printed.
-        not complete, add as needed -- compare across applications and code above
+        sometimes it is hard to see where values have come out this may help if displayed.
         """
         a_str   = ""
         a_str   = ">>>>>>>>>>* parameters *<<<<<<<<<<<<"
@@ -68,7 +63,7 @@ class Parameters( ):
     def __init__( self, ):
         """
         Init for the instance, usually not modified, except perhaps to debug
-        I keey way be down in listing because it should not be messed with.
+        I keep way be down in listing because it should not generally be messed with.
         """
         self.mode_default()
         self.choose_mode()
